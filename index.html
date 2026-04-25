@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AquaForecast Pro — Water Resources Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LANDING PAGE -->
+<section id="landing" class="landing">
+  <div class="landing-bg">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+    <div class="ripple r1"></div>
+    <div class="ripple r2"></div>
+    <div class="ripple r3"></div>
+  </div>
+  <nav class="landing-nav">
+    <div class="logo">
+      <div class="logo-mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M7 13c0 2.76 2.24 5 5 5s5-2.24 5-5"/><path d="M12 8v4"/></svg>
+      </div>
+      AquaForecast <span class="logo-pro">Pro</span>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="btn-launch" onclick="launchApp()">Launch Dashboard →</button>
+    </div>
+  </nav>
+  <div class="landing-hero">
+    <div class="hero-tag">Water Intelligence Platform · 2025</div>
+    <h1 class="hero-title">Every drop,<br><em>accounted for.</em></h1>
+    <p class="hero-sub">Advanced forecasting, real-time storage assessment, and AI-powered strategy for sustainable water resource management.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="launchApp()">
+        <span>Open Dashboard</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button class="btn-ghost" onclick="scrollToFeatures()">See Features</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-val">4.2B</div><div class="stat-label">m³ tracked</div></div>
+      <div class="stat-div"></div>
+      <div class="stat"><div class="stat-val">12</div><div class="stat-label">reservoirs</div></div>
+      <div class="stat-div"></div>
+      <div class="stat"><div class="stat-val">30yr</div><div class="stat-label">horizon</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint" onclick="scrollToFeatures()">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section id="features" class="features-section">
+  <div class="section-inner">
+    <div class="section-tag">Platform capabilities</div>
+    <h2 class="section-title">Built for water stewards<br>who think in decades.</h2>
+    <div class="features-grid">
+      <div class="feat-card fc-large">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Predictive forecasting</h3>
+        <p>Multi-scenario demand projections up to 30 years ahead. Model baseline growth, rapid urbanisation, and climate stress simultaneously.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <h3>Storage intelligence</h3>
+        <p>Live reservoir assessment with colour-coded alerts and threshold monitoring.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div>
+        <h3>Risk radar</h3>
+        <p>Six-dimension stress testing including drought, flood, and infrastructure failure scenarios.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <h3>CSV import</h3>
+        <p>Paste or upload historical data — all charts update instantly from your own numbers.</p>
+      </div>
+      <div class="feat-card fc-large">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>AI strategy engine</h3>
+        <p>One click sends your live data for AI-generated strategic recommendations, risk briefs, and policy memos tailored to your exact numbers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+  <div class="section-inner about-inner">
+    <div class="about-text">
+      <div class="section-tag">Our mission</div>
+      <h2 class="section-title">Water is finite.<br>Intelligence is not.</h2>
+      <p>AquaForecast Pro was built for planners, engineers, and policy makers who need more than spreadsheets. We integrate climate projections, population models, and reservoir physics into a single living dashboard that grows with your data.</p>
+      <p>From a single river basin to a regional network, the platform scales — and every number you enter instantly reshapes every chart, every forecast, every recommendation.</p>
+      <button class="btn-primary" onclick="launchApp()">Start now →</button>
+    </div>
+    <div class="about-visual">
+      <div class="about-orb"></div>
+      <div class="about-ring r-a"></div>
+      <div class="about-ring r-b"></div>
+      <div class="about-stats-float">
+        <div class="float-card fc-a"><div class="fc-num">68%</div><div class="fc-lbl">Avg utilisation</div></div>
+        <div class="float-card fc-b"><div class="fc-num">+22%</div><div class="fc-lbl">2030 demand forecast</div></div>
+        <div class="float-card fc-c"><div class="fc-num">0.81</div><div class="fc-lbl">Rainfall index</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="section-tag">Get in touch</div>
+    <h2 class="section-title">Start your assessment today.</h2>
+    <div class="contact-grid">
+      <div class="contact-form-wrap">
+        <form class="contact-form" onsubmit="handleContact(event)">
+          <div class="cf-row">
+            <div class="cf-field"><label>Name</label><input type="text" placeholder="Your name" required></div>
+            <div class="cf-field"><label>Organisation</label><input type="text" placeholder="Water authority / agency"></div>
+          </div>
+          <div class="cf-field"><label>Email</label><input type="email" placeholder="you@organisation.com" required></div>
+          <div class="cf-field"><label>Message</label><textarea rows="4" placeholder="Tell us about your basin, region or project…"></textarea></div>
+          <button type="submit" class="btn-primary full">Send message →</button>
+          <div id="formMsg" class="form-success" style="display:none">Message sent! We'll be in touch within 24 hours.</div>
+        </form>
+      </div>
+      <div class="contact-info">
+        <div class="ci-item">
+          <div class="ci-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="ci-label">Email</div><div class="ci-val">hello@aquaforecast.pro</div></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="ci-label">Headquarters</div><div class="ci-val">Geneva, Switzerland</div></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="ci-label">Response time</div><div class="ci-val">Within 24 hours</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M7 13c0 2.76 2.24 5 5 5s5-2.24 5-5"/><path d="M12 8v4"/></svg></div>
+        AquaForecast <span class="logo-pro">Pro</span>
+      </div>
+      <p>Water intelligence for the next generation of planners.</p>
+    </div>
+    <div class="footer-links">
+      <div class="fl-col"><div class="fl-head">Platform</div><a onclick="launchApp()">Dashboard</a><a href="#features">Features</a></div>
+      <div class="fl-col"><div class="fl-head">Company</div><a href="#about">About</a><a href="#contact">Contact</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 AquaForecast Pro. All rights reserved.</span>
+    <span>Built for water stewards worldwide.</span>
+  </div>
+</footer>
+
+<!-- APP DASHBOARD -->
+<div id="app" class="app hidden">
+  <!-- Top Bar -->
+  <header class="app-header">
+    <button class="back-btn" onclick="closeDash()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back
+    </button>
+    <div class="app-logo">
+      <div class="logo-mark sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M7 13c0 2.76 2.24 5 5 5s5-2.24 5-5"/><path d="M12 8v4"/></svg></div>
+      AquaForecast <span class="logo-pro">Pro</span>
+    </div>
+    <div class="app-nav">
+      <button class="anav on" data-pane="dash" onclick="switchPane(this)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </button>
+      <button class="anav" data-pane="data" onclick="switchPane(this)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        Data entry
+      </button>
+      <button class="anav" data-pane="res" onclick="switchPane(this)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Reservoirs
+      </button>
+      <button class="anav" data-pane="fcast" onclick="switchPane(this)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Forecast
+      </button>
+      <button class="anav" data-pane="risk" onclick="switchPane(this)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+        Risk
+      </button>
+      <button class="anav" data-pane="strategy" onclick="switchPane(this)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Strategy
+      </button>
+    </div>
+    <div class="app-status">
+      <div class="live-dot"></div>
+      <span id="lastUpdate">Live</span>
+    </div>
+  </header>
+
+  <div class="app-body">
+
+    <!-- DASHBOARD PANE -->
+    <div id="pane-dash" class="pane active">
+      <div class="pane-header">
+        <div>
+          <div class="pane-title">Overview dashboard</div>
+          <div class="pane-sub" id="regionLabel">Northern Basin · 2025</div>
+        </div>
+        <div id="statusPill" class="status-pill ok">Healthy</div>
+      </div>
+      <div id="alertZone" class="alert-zone"></div>
+      <div class="kpi-strip" id="kpiStrip"></div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><span class="card-title">Sector demand split</span><span class="badge blue" id="totalBadge">— MCM/yr</span></div>
+          <div class="legend-row">
+            <span class="leg"><span class="ldot" style="background:#2C8CCC"></span>Agriculture</span>
+            <span class="leg"><span class="ldot" style="background:#1aad7a"></span>Municipal</span>
+            <span class="leg"><span class="ldot" style="background:#d4860a"></span>Industrial</span>
+            <span class="leg"><span class="ldot" style="background:#c9513b"></span>Ecological</span>
+          </div>
+          <div style="position:relative;height:200px"><canvas id="donutC" role="img" aria-label="Donut chart of sector demand">Sector demand.</canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><span class="card-title">Sector breakdown</span></div>
+          <div id="sparklines"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><span class="card-title">Reservoir fill levels</span><span class="badge teal" id="resBadgeDash">— / — MCM</span></div>
+        <div id="resBarsMain"></div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><span class="card-title">Monthly usage by sector (MCM)</span></div>
+        <div class="legend-row">
+          <span class="leg"><span class="ldot" style="background:#2C8CCC"></span>Agriculture</span>
+          <span class="leg"><span class="ldot" style="background:#1aad7a"></span>Municipal</span>
+          <span class="leg"><span class="ldot" style="background:#d4860a"></span>Industrial</span>
+          <span class="leg"><span class="ldot" style="background:#c9513b"></span>Ecological</span>
+        </div>
+        <div style="position:relative;height:240px"><canvas id="usageC" role="img" aria-label="Stacked monthly usage chart">Monthly usage.</canvas></div>
+      </div>
+    </div>
+
+    <!-- DATA ENTRY PANE -->
+    <div id="pane-data" class="pane">
+      <div class="pane-header"><div class="pane-title">Data entry</div><div class="pane-sub">All charts update in real time</div></div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><span class="card-title">Region settings</span></div>
+          <div class="field"><label>Region name</label><input id="regionName" type="text" value="Northern Basin" oninput="refreshAll()"></div>
+          <div class="field"><label>Population (thousands)</label><input id="pop" type="number" value="850" min="1" oninput="refreshAll()"></div>
+          <div class="field"><label>Annual rainfall (mm)</label><input id="rainfall" type="number" value="680" min="0" oninput="refreshAll()"></div>
+          <div class="field"><label>Groundwater contribution %</label><input id="gwPct" type="number" value="15" min="0" max="100" oninput="refreshAll()"></div>
+          <div class="field"><label>Base year</label>
+            <select id="baseYear" onchange="refreshAll()"><option>2020</option><option selected>2025</option><option>2030</option></select>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><span class="card-title">Annual demand by sector (MCM/yr)</span></div>
+          <div class="field"><label>Agriculture</label><input id="agri" type="number" value="420" min="0" oninput="refreshAll()"></div>
+          <div class="field"><label>Municipal</label><input id="mun" type="number" value="180" min="0" oninput="refreshAll()"></div>
+          <div class="field"><label>Industrial</label><input id="ind" type="number" value="95" min="0" oninput="refreshAll()"></div>
+          <div class="field"><label>Ecological</label><input id="eco" type="number" value="45" min="0" oninput="refreshAll()"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><span class="card-title">Seasonal multipliers</span></div>
+        <div class="sl-row"><label>Agriculture peak factor</label><input type="range" min="50" max="200" value="100" step="1" id="agriM" oninput="sv('agriMV',this.value+'%');refreshUsageChart()"><span class="sl-val" id="agriMV">100%</span></div>
+        <div class="sl-row"><label>Municipal growth factor</label><input type="range" min="50" max="200" value="100" step="1" id="munM" oninput="sv('munMV',this.value+'%');refreshUsageChart()"><span class="sl-val" id="munMV">100%</span></div>
+        <div class="sl-row"><label>Industrial activity</label><input type="range" min="50" max="200" value="100" step="1" id="indM" oninput="sv('indMV',this.value+'%');refreshUsageChart()"><span class="sl-val" id="indMV">100%</span></div>
+        <div class="sl-row"><label>Seasonal rainfall factor</label><input type="range" min="50" max="150" value="100" step="1" id="rainM" oninput="sv('rainMV',this.value+'%');refreshClimateChart()"><span class="sl-val" id="rainMV">100%</span></div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><span class="card-title">Rainfall vs evaporation (mm)</span></div>
+        <div class="legend-row">
+          <span class="leg"><span class="ldot" style="background:#2C8CCC"></span>Rainfall</span>
+          <span class="leg"><span class="ldot" style="background:#c9513b"></span>Evaporation</span>
+          <span class="leg"><span class="ldot" style="background:#1aad7a"></span>Net availability</span>
+        </div>
+        <div style="position:relative;height:220px"><canvas id="climateC" role="img" aria-label="Climate chart">Climate indicators.</canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><span class="card-title">Import historical data (CSV)</span></div>
+        <div class="import-zone" onclick="document.getElementById('csvIn').click()">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <div class="iz-label">Drop CSV or click to upload</div>
+          <div class="iz-sub">Format: agri, mun, ind, eco (MCM/yr per row)</div>
+        </div>
+        <input type="file" id="csvIn" accept=".csv" style="display:none" onchange="importCSV(this)">
+        <textarea id="csvPaste" rows="3" placeholder="Or paste CSV here: 420,180,95,45" oninput="parseCSV(this.value)"></textarea>
+        <div id="importMsg" class="import-msg"></div>
+      </div>
+    </div>
+
+    <!-- RESERVOIRS PANE -->
+    <div id="pane-res" class="pane">
+      <div class="pane-header">
+        <div><div class="pane-title">Reservoir management</div><div class="pane-sub" id="resTotal">— MCM total capacity</div></div>
+        <button class="btn-sm" onclick="addRes()">+ Add reservoir</button>
+      </div>
+      <div class="card">
+        <div class="card-hd"><span class="card-title">Reservoir inventory</span></div>
+        <div id="resInputs"></div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><span class="card-title">Fill level overview</span><span class="badge teal" id="resBadge2">—</span></div>
+        <div id="resBars2"></div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><span class="card-title">Capacity vs fill (MCM)</span></div>
+          <div style="position:relative;height:260px"><canvas id="resC" role="img" aria-label="Reservoir fill chart">Reservoir levels.</canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><span class="card-title">Inflow vs outflow (MCM/yr)</span></div>
+          <div class="legend-row">
+            <span class="leg"><span class="ldot" style="background:#1aad7a"></span>Inflow</span>
+            <span class="leg"><span class="ldot" style="background:#c9513b"></span>Outflow</span>
+            <span class="leg"><span class="ldot" style="background:#2C8CCC;border-radius:50%"></span>Net</span>
+          </div>
+          <div style="position:relative;height:220px"><canvas id="flowC" role="img" aria-label="Flow chart">Flow balance.</canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORECAST PANE -->
+    <div id="pane-fcast" class="pane">
+      <div class="pane-header"><div class="pane-title">Forecast modelling</div><div class="pane-sub">Adjust parameters to see live projections</div></div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><span class="card-title">Growth parameters</span></div>
+          <div class="field"><label>Population growth rate (%/yr)</label><input id="popGr" type="number" value="1.8" step="0.1" min="0" max="10" oninput="refreshForecast()"></div>
+          <div class="field"><label>Climate stress multiplier (1–2×)</label><input id="climStr" type="number" value="1.2" step="0.05" min="1" max="2" oninput="refreshForecast()"></div>
+          <div class="field"><label>Efficiency improvement (%/yr)</label><input id="effGain" type="number" value="0.8" step="0.1" min="0" max="5" oninput="refreshForecast()"></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><span class="card-title">Supply parameters</span></div>
+          <div class="field"><label>Recycled water uptake (%/yr)</label><input id="recycle" type="number" value="0.5" step="0.1" min="0" max="5" oninput="refreshForecast()"></div>
+          <div class="field"><label>New infrastructure capacity (MCM)</label><input id="newCap" type="number" value="0" step="10" min="0" oninput="refreshForecast()"></div>
+          <div class="field"><label>Forecast horizon (years)</label><input id="horizon" type="number" value="15" step="1" min="5" max="30" oninput="refreshForecast()"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd">
+          <span class="card-title">Demand index projection (base = 100)</span>
+          <div class="sc-toggle">
+            <button class="sc on" onclick="setScen('all',this)">All</button>
+            <button class="sc" onclick="setScen('base',this)">Baseline</button>
+            <button class="sc" onclick="setScen('stress',this)">Stress</button>
+            <button class="sc" onclick="setScen('eff',this)">Efficient</button>
+          </div>
+        </div>
+        <div class="legend-row">
+          <span class="leg"><span class="ldot" style="background:#1aad7a"></span>Baseline</span>
+          <span class="leg"><span class="ldot" style="background:#c9513b"></span>Climate stress</span>
+          <span class="leg"><span class="ldot" style="background:#2C8CCC"></span>With efficiency</span>
+          <span class="leg"><span class="ldot" style="background:#9b8cc4"></span>Supply capacity</span>
+        </div>
+        <div style="position:relative;height:260px"><canvas id="fcastC" role="img" aria-label="Forecast chart">Forecast projection.</canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><span class="card-title">Supply–demand gap (MCM)</span><span class="badge" id="gapBadge">—</span></div>
+        <div style="position:relative;height:220px"><canvas id="gapC" role="img" aria-label="Gap chart">Gap analysis.</canvas></div>
+      </div>
+    </div>
+
+    <!-- RISK PANE -->
+    <div id="pane-risk" class="pane">
+      <div class="pane-header"><div class="pane-title">Risk assessment</div><div class="pane-sub">Stress test your water system</div></div>
+      <div class="risk-kpis" id="riskKpis"></div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><span class="card-title">Stress test controls</span></div>
+          <div class="sl-row"><label>Drought severity (1–5)</label><input type="range" min="1" max="5" value="2" step="1" id="drought" oninput="sv('droughtV','Level '+this.value);refreshRisk()"><span class="sl-val" id="droughtV">Level 2</span></div>
+          <div class="sl-row"><label>Flood probability %</label><input type="range" min="0" max="50" value="10" step="1" id="flood" oninput="sv('floodV',this.value+'%');refreshRisk()"><span class="sl-val" id="floodV">10%</span></div>
+          <div class="sl-row"><label>Infrastructure failure %</label><input type="range" min="0" max="30" value="5" step="1" id="infra" oninput="sv('infraV',this.value+'%');refreshRisk()"><span class="sl-val" id="infraV">5%</span></div>
+          <div class="sl-row"><label>Demand surge factor</label><input type="range" min="100" max="150" value="110" step="1" id="surge" oninput="sv('surgeV',this.value+'%');refreshRisk()"><span class="sl-val" id="surgeV">110%</span></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><span class="card-title">Risk radar</span></div>
+          <div style="position:relative;height:260px"><canvas id="radarC" role="img" aria-label="Risk radar chart">Risk radar.</canvas></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><span class="card-title">Risk-adjusted demand scenarios (MCM)</span></div>
+        <div style="position:relative;height:200px"><canvas id="riskBarC" role="img" aria-label="Risk bar chart">Risk scenarios.</canvas></div>
+      </div>
+    </div>
+
+    <!-- STRATEGY PANE -->
+    <div id="pane-strategy" class="pane">
+      <div class="pane-header"><div class="pane-title">Strategic planning</div><div class="pane-sub">AI-powered recommendations based on your live data</div></div>
+      <div class="strategy-cards">
+        <div class="strat-card blue">
+          <div class="strat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3>5-year strategy</h3>
+          <p>Top interventions ranked by impact-to-cost ratio for your exact demand/supply scenario.</p>
+          <button class="strat-btn" onclick="doAI('strategy')">Generate →</button>
+        </div>
+        <div class="strat-card teal">
+          <div class="strat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div>
+          <h3>Risk assessment brief</h3>
+          <p>Concise risk narrative for decision-makers, based on your stress test parameters.</p>
+          <button class="strat-btn" onclick="doAI('risk')">Generate →</button>
+        </div>
+        <div class="strat-card amber">
+          <div class="strat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h3>Policy memo</h3>
+          <p>2-page policy memo with immediate, medium-term, and long-term governance recommendations.</p>
+          <button class="strat-btn" onclick="doAI('policy')">Generate →</button>
+        </div>
+        <div class="strat-card red">
+          <div class="strat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Mitigation plan</h3>
+          <p>Phased mitigation actions — immediate (0–6 months), 1–3 years, and 3–10 year horizon.</p>
+          <button class="strat-btn" onclick="doAI('mitigation')">Generate →</button>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1.5rem">
+        <div class="card-hd"><span class="card-title">Current system snapshot</span></div>
+        <div id="snapshotGrid" class="snapshot-grid"></div>
+      </div>
+    </div>
+
+  </div><!-- end app-body -->
+</div><!-- end app -->
+
+<script src="app.js"></script>
+</body>
+</html>
