@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AquaForecast Pro — Water Resources Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,17 +14,20 @@
 <!-- LANDING PAGE -->
 <section id="landing" class="landing">
   <div class="landing-bg">
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-    <div class="ripple r1"></div>
-    <div class="ripple r2"></div>
-    <div class="ripple r3"></div>
+    <div class="bg-blob b1"></div>
+    <div class="bg-blob b2"></div>
+    <div class="bg-blob b3"></div>
+    <div class="bg-grid"></div>
+    <div class="wave-container">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
   </div>
   <nav class="landing-nav">
     <div class="logo">
       <div class="logo-mark">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M7 13c0 2.76 2.24 5 5 5s5-2.24 5-5"/><path d="M12 8v4"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M7 13c0 2.76 2.24 5 5 5s5-2.24 5-5"/><path d="M12 8v4"/></svg>
       </div>
       AquaForecast <span class="logo-pro">Pro</span>
     </div>
@@ -36,26 +39,38 @@
     </div>
   </nav>
   <div class="landing-hero">
-    <div class="hero-tag">Water Intelligence Platform · 2025</div>
+    <div class="hero-tag">
+      <span class="tag-dot"></span>
+      Water Intelligence Platform · 2025
+    </div>
     <h1 class="hero-title">Every drop,<br><em>accounted for.</em></h1>
     <p class="hero-sub">Advanced forecasting, real-time storage assessment, and AI-powered strategy for sustainable water resource management.</p>
     <div class="hero-actions">
       <button class="btn-primary" onclick="launchApp()">
         <span>Open Dashboard</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
-      <button class="btn-ghost" onclick="scrollToFeatures()">See Features</button>
+      <button class="btn-ghost" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">See Features</button>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-val">4.2B</div><div class="stat-label">m³ tracked</div></div>
+      <div class="stat">
+        <div class="stat-val">4.2B</div>
+        <div class="stat-label">m³ tracked</div>
+      </div>
       <div class="stat-div"></div>
-      <div class="stat"><div class="stat-val">12</div><div class="stat-label">reservoirs</div></div>
+      <div class="stat">
+        <div class="stat-val">12</div>
+        <div class="stat-label">reservoirs</div>
+      </div>
       <div class="stat-div"></div>
-      <div class="stat"><div class="stat-val">30yr</div><div class="stat-label">horizon</div></div>
+      <div class="stat">
+        <div class="stat-val">30yr</div>
+        <div class="stat-label">horizon</div>
+      </div>
     </div>
   </div>
-  <div class="scroll-hint" onclick="scrollToFeatures()">
-    <span>Scroll</span>
+  <div class="scroll-hint" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+    <span>Scroll to explore</span>
     <div class="scroll-arrow"></div>
   </div>
 </section>
@@ -67,27 +82,37 @@
     <h2 class="section-title">Built for water stewards<br>who think in decades.</h2>
     <div class="features-grid">
       <div class="feat-card fc-large">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="feat-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
         <h3>Predictive forecasting</h3>
         <p>Multi-scenario demand projections up to 30 years ahead. Model baseline growth, rapid urbanisation, and climate stress simultaneously.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <div class="feat-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </div>
         <h3>Storage intelligence</h3>
         <p>Live reservoir assessment with colour-coded alerts and threshold monitoring.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div>
+        <div class="feat-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+        </div>
         <h3>Risk radar</h3>
         <p>Six-dimension stress testing including drought, flood, and infrastructure failure scenarios.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <div class="feat-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </div>
         <h3>CSV import</h3>
         <p>Paste or upload historical data — all charts update instantly from your own numbers.</p>
       </div>
       <div class="feat-card fc-large">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div class="feat-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
         <h3>AI strategy engine</h3>
         <p>One click sends your live data for AI-generated strategic recommendations, risk briefs, and policy memos tailored to your exact numbers.</p>
       </div>
@@ -133,7 +158,7 @@
           <div class="cf-field"><label>Email</label><input type="email" placeholder="you@organisation.com" required></div>
           <div class="cf-field"><label>Message</label><textarea rows="4" placeholder="Tell us about your basin, region or project…"></textarea></div>
           <button type="submit" class="btn-primary full">Send message →</button>
-          <div id="formMsg" class="form-success" style="display:none">Message sent! We'll be in touch within 24 hours.</div>
+          <div id="formMsg" class="form-success" style="display:none">✓ Message sent! We'll be in touch within 24 hours.</div>
         </form>
       </div>
       <div class="contact-info">
@@ -159,13 +184,15 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="logo">
-        <div class="logo-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M7 13c0 2.76 2.24 5 5 5s5-2.24 5-5"/><path d="M12 8v4"/></svg></div>
+        <div class="logo-mark">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M7 13c0 2.76 2.24 5 5 5s5-2.24 5-5"/><path d="M12 8v4"/></svg>
+        </div>
         AquaForecast <span class="logo-pro">Pro</span>
       </div>
       <p>Water intelligence for the next generation of planners.</p>
     </div>
     <div class="footer-links">
-      <div class="fl-col"><div class="fl-head">Platform</div><a onclick="launchApp()">Dashboard</a><a href="#features">Features</a></div>
+      <div class="fl-col"><div class="fl-head">Platform</div><a onclick="launchApp()" style="cursor:pointer">Dashboard</a><a href="#features">Features</a></div>
       <div class="fl-col"><div class="fl-head">Company</div><a href="#about">About</a><a href="#contact">Contact</a></div>
     </div>
   </div>
@@ -177,7 +204,6 @@
 
 <!-- APP DASHBOARD -->
 <div id="app" class="app hidden">
-  <!-- Top Bar -->
   <header class="app-header">
     <button class="back-btn" onclick="closeDash()">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -194,7 +220,7 @@
       </button>
       <button class="anav" data-pane="data" onclick="switchPane(this)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-        Data entry
+        Data Entry
       </button>
       <button class="anav" data-pane="res" onclick="switchPane(this)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
@@ -225,10 +251,10 @@
     <div id="pane-dash" class="pane active">
       <div class="pane-header">
         <div>
-          <div class="pane-title">Overview dashboard</div>
+          <div class="pane-title">Overview Dashboard</div>
           <div class="pane-sub" id="regionLabel">Northern Basin · 2025</div>
         </div>
-        <div id="statusPill" class="status-pill ok">Healthy</div>
+        <div id="statusPill" class="status-pill ok">● Healthy</div>
       </div>
       <div id="alertZone" class="alert-zone"></div>
       <div class="kpi-strip" id="kpiStrip"></div>
@@ -236,12 +262,12 @@
         <div class="card">
           <div class="card-hd"><span class="card-title">Sector demand split</span><span class="badge blue" id="totalBadge">— MCM/yr</span></div>
           <div class="legend-row">
-            <span class="leg"><span class="ldot" style="background:#2C8CCC"></span>Agriculture</span>
-            <span class="leg"><span class="ldot" style="background:#1aad7a"></span>Municipal</span>
-            <span class="leg"><span class="ldot" style="background:#d4860a"></span>Industrial</span>
-            <span class="leg"><span class="ldot" style="background:#c9513b"></span>Ecological</span>
+            <span class="leg"><span class="ldot" style="background:#3B82F6"></span>Agriculture</span>
+            <span class="leg"><span class="ldot" style="background:#10B981"></span>Municipal</span>
+            <span class="leg"><span class="ldot" style="background:#F59E0B"></span>Industrial</span>
+            <span class="leg"><span class="ldot" style="background:#EF4444"></span>Ecological</span>
           </div>
-          <div style="position:relative;height:200px"><canvas id="donutC" role="img" aria-label="Donut chart of sector demand">Sector demand.</canvas></div>
+          <div style="position:relative;height:200px"><canvas id="donutC"></canvas></div>
         </div>
         <div class="card">
           <div class="card-hd"><span class="card-title">Sector breakdown</span></div>
@@ -255,18 +281,18 @@
       <div class="card">
         <div class="card-hd"><span class="card-title">Monthly usage by sector (MCM)</span></div>
         <div class="legend-row">
-          <span class="leg"><span class="ldot" style="background:#2C8CCC"></span>Agriculture</span>
-          <span class="leg"><span class="ldot" style="background:#1aad7a"></span>Municipal</span>
-          <span class="leg"><span class="ldot" style="background:#d4860a"></span>Industrial</span>
-          <span class="leg"><span class="ldot" style="background:#c9513b"></span>Ecological</span>
+          <span class="leg"><span class="ldot" style="background:#3B82F6"></span>Agriculture</span>
+          <span class="leg"><span class="ldot" style="background:#10B981"></span>Municipal</span>
+          <span class="leg"><span class="ldot" style="background:#F59E0B"></span>Industrial</span>
+          <span class="leg"><span class="ldot" style="background:#EF4444"></span>Ecological</span>
         </div>
-        <div style="position:relative;height:240px"><canvas id="usageC" role="img" aria-label="Stacked monthly usage chart">Monthly usage.</canvas></div>
+        <div style="position:relative;height:240px"><canvas id="usageC"></canvas></div>
       </div>
     </div>
 
     <!-- DATA ENTRY PANE -->
     <div id="pane-data" class="pane">
-      <div class="pane-header"><div class="pane-title">Data entry</div><div class="pane-sub">All charts update in real time</div></div>
+      <div class="pane-header"><div class="pane-title">Data Entry</div><div class="pane-sub">All charts update in real time</div></div>
       <div class="two-col">
         <div class="card">
           <div class="card-hd"><span class="card-title">Region settings</span></div>
@@ -296,11 +322,11 @@
       <div class="card">
         <div class="card-hd"><span class="card-title">Rainfall vs evaporation (mm)</span></div>
         <div class="legend-row">
-          <span class="leg"><span class="ldot" style="background:#2C8CCC"></span>Rainfall</span>
-          <span class="leg"><span class="ldot" style="background:#c9513b"></span>Evaporation</span>
-          <span class="leg"><span class="ldot" style="background:#1aad7a"></span>Net availability</span>
+          <span class="leg"><span class="ldot" style="background:#3B82F6"></span>Rainfall</span>
+          <span class="leg"><span class="ldot" style="background:#EF4444"></span>Evaporation</span>
+          <span class="leg"><span class="ldot" style="background:#10B981"></span>Net availability</span>
         </div>
-        <div style="position:relative;height:220px"><canvas id="climateC" role="img" aria-label="Climate chart">Climate indicators.</canvas></div>
+        <div style="position:relative;height:220px"><canvas id="climateC"></canvas></div>
       </div>
       <div class="card">
         <div class="card-hd"><span class="card-title">Import historical data (CSV)</span></div>
@@ -318,7 +344,7 @@
     <!-- RESERVOIRS PANE -->
     <div id="pane-res" class="pane">
       <div class="pane-header">
-        <div><div class="pane-title">Reservoir management</div><div class="pane-sub" id="resTotal">— MCM total capacity</div></div>
+        <div><div class="pane-title">Reservoir Management</div><div class="pane-sub" id="resTotal">— MCM total capacity</div></div>
         <button class="btn-sm" onclick="addRes()">+ Add reservoir</button>
       </div>
       <div class="card">
@@ -332,23 +358,23 @@
       <div class="two-col">
         <div class="card">
           <div class="card-hd"><span class="card-title">Capacity vs fill (MCM)</span></div>
-          <div style="position:relative;height:260px"><canvas id="resC" role="img" aria-label="Reservoir fill chart">Reservoir levels.</canvas></div>
+          <div style="position:relative;height:260px"><canvas id="resC"></canvas></div>
         </div>
         <div class="card">
           <div class="card-hd"><span class="card-title">Inflow vs outflow (MCM/yr)</span></div>
           <div class="legend-row">
-            <span class="leg"><span class="ldot" style="background:#1aad7a"></span>Inflow</span>
-            <span class="leg"><span class="ldot" style="background:#c9513b"></span>Outflow</span>
-            <span class="leg"><span class="ldot" style="background:#2C8CCC;border-radius:50%"></span>Net</span>
+            <span class="leg"><span class="ldot" style="background:#10B981"></span>Inflow</span>
+            <span class="leg"><span class="ldot" style="background:#EF4444"></span>Outflow</span>
+            <span class="leg"><span class="ldot" style="background:#3B82F6"></span>Net</span>
           </div>
-          <div style="position:relative;height:220px"><canvas id="flowC" role="img" aria-label="Flow chart">Flow balance.</canvas></div>
+          <div style="position:relative;height:220px"><canvas id="flowC"></canvas></div>
         </div>
       </div>
     </div>
 
     <!-- FORECAST PANE -->
     <div id="pane-fcast" class="pane">
-      <div class="pane-header"><div class="pane-title">Forecast modelling</div><div class="pane-sub">Adjust parameters to see live projections</div></div>
+      <div class="pane-header"><div class="pane-title">Forecast Modelling</div><div class="pane-sub">Adjust parameters to see live projections</div></div>
       <div class="two-col">
         <div class="card">
           <div class="card-hd"><span class="card-title">Growth parameters</span></div>
@@ -374,22 +400,22 @@
           </div>
         </div>
         <div class="legend-row">
-          <span class="leg"><span class="ldot" style="background:#1aad7a"></span>Baseline</span>
-          <span class="leg"><span class="ldot" style="background:#c9513b"></span>Climate stress</span>
-          <span class="leg"><span class="ldot" style="background:#2C8CCC"></span>With efficiency</span>
-          <span class="leg"><span class="ldot" style="background:#9b8cc4"></span>Supply capacity</span>
+          <span class="leg"><span class="ldot" style="background:#10B981"></span>Baseline</span>
+          <span class="leg"><span class="ldot" style="background:#EF4444"></span>Climate stress</span>
+          <span class="leg"><span class="ldot" style="background:#3B82F6"></span>With efficiency</span>
+          <span class="leg"><span class="ldot" style="background:#8B5CF6"></span>Supply capacity</span>
         </div>
-        <div style="position:relative;height:260px"><canvas id="fcastC" role="img" aria-label="Forecast chart">Forecast projection.</canvas></div>
+        <div style="position:relative;height:260px"><canvas id="fcastC"></canvas></div>
       </div>
       <div class="card">
         <div class="card-hd"><span class="card-title">Supply–demand gap (MCM)</span><span class="badge" id="gapBadge">—</span></div>
-        <div style="position:relative;height:220px"><canvas id="gapC" role="img" aria-label="Gap chart">Gap analysis.</canvas></div>
+        <div style="position:relative;height:220px"><canvas id="gapC"></canvas></div>
       </div>
     </div>
 
     <!-- RISK PANE -->
     <div id="pane-risk" class="pane">
-      <div class="pane-header"><div class="pane-title">Risk assessment</div><div class="pane-sub">Stress test your water system</div></div>
+      <div class="pane-header"><div class="pane-title">Risk Assessment</div><div class="pane-sub">Stress test your water system</div></div>
       <div class="risk-kpis" id="riskKpis"></div>
       <div class="two-col">
         <div class="card">
@@ -401,18 +427,18 @@
         </div>
         <div class="card">
           <div class="card-hd"><span class="card-title">Risk radar</span></div>
-          <div style="position:relative;height:260px"><canvas id="radarC" role="img" aria-label="Risk radar chart">Risk radar.</canvas></div>
+          <div style="position:relative;height:260px"><canvas id="radarC"></canvas></div>
         </div>
       </div>
       <div class="card">
         <div class="card-hd"><span class="card-title">Risk-adjusted demand scenarios (MCM)</span></div>
-        <div style="position:relative;height:200px"><canvas id="riskBarC" role="img" aria-label="Risk bar chart">Risk scenarios.</canvas></div>
+        <div style="position:relative;height:200px"><canvas id="riskBarC"></canvas></div>
       </div>
     </div>
 
     <!-- STRATEGY PANE -->
     <div id="pane-strategy" class="pane">
-      <div class="pane-header"><div class="pane-title">Strategic planning</div><div class="pane-sub">AI-powered recommendations based on your live data</div></div>
+      <div class="pane-header"><div class="pane-title">Strategic Planning</div><div class="pane-sub">AI-powered recommendations based on your live data</div></div>
       <div class="strategy-cards">
         <div class="strat-card blue">
           <div class="strat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
@@ -443,10 +469,17 @@
         <div class="card-hd"><span class="card-title">Current system snapshot</span></div>
         <div id="snapshotGrid" class="snapshot-grid"></div>
       </div>
+      <div class="card" id="aiOutputCard" style="margin-top:1.5rem;display:none">
+        <div class="card-hd">
+          <span class="card-title" id="aiOutputTitle">AI Analysis</span>
+          <button class="btn-sm" onclick="document.getElementById('aiOutputCard').style.display='none'">✕ Close</button>
+        </div>
+        <div id="aiOutput" class="ai-output"></div>
+      </div>
     </div>
 
-  </div><!-- end app-body -->
-</div><!-- end app -->
+  </div>
+</div>
 
 <script src="app.js"></script>
 </body>
